@@ -13,7 +13,8 @@ public class BubbleSort {
         //测试冒泡排序时间复杂度O(n^2)
         int[] arr = new int[80000];
         for (int i = 0; i < 80000; i++) {
-            arr[i] = (int) (Math.random() * 80000);//[0,80000)随机数
+            arr[i] = (int) (Math.random() * 80000);
+            //[0,80000)随机数
         }
 
         System.out.println("排序前");
@@ -33,11 +34,14 @@ public class BubbleSort {
     }
 
     public static void bubbleSort(int[] arr) {
-        int temp = 0;//临时变量
-        boolean flag = false;//标记是否改变
+        //临时变量
+        int temp = 0;
+        //标记是否改变
+        boolean flag = false;
         for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - 1; j++) {
-                if (arr[j] > arr[j + 1]) {//如果前面数大于后面数，交换
+            for (int j = 0; j < arr.length - 1 - i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    //如果前面数大于后面数，交换
                     flag = true;
                     temp = arr[j];
                     arr[j] = arr[j + 1];
